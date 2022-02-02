@@ -1,0 +1,131 @@
+	
+._btn{
+	border: 1px solid $orange;
+	border-radius: 5px;
+	width: 164px;
+	height: 53px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+//<ГОТОВЫЕ КЛАССЫ>===================================================================================
+/* ================================================================================ */
+/*################################################################################# */
+
+._ibg{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+
+._ibg img{
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+
+._rub{
+	&::after{
+		content: " ₽";
+	}
+}
+
+._dol{
+	&::after{
+		content: " $";
+	}
+}
+
+._eur{
+	&::after{
+		content: " €";
+	}
+}
+
+%noselect{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+
+
+//<_____________________>===================================================================================
+
+.page{
+//.page__slider-main {}
+	&__slider-main {
+		margin-top: 150px;
+		@media(max-width: 1500px){
+			margin-top: 120px;
+		}
+	}
+//.page__new-approach {}
+	&__new-approach {
+		margin-top: 155px;
+	}
+}
+
+
+//<навигауия свайпер>===================================================================================
+
+.swiper-button-prev,.swiper-button-next{
+	cursor: pointer;
+	pointer-events: auto;
+	border-radius: 50%;
+	background-color: #fff;
+	width: 50px;
+	height: 50px;
+	z-index: 10;
+	&::after{
+		font-size: 14px;
+		color: #000;
+	}
+	@media(max-width: 1600px){
+		position: relative;
+		margin: 0px 70px 0px;
+	}
+}
+
+.swiper-button-prev{
+	transform: translate(-150%,0);
+}
+.swiper-button-next{
+	transform: translate(150%,0);
+}
+//<заглавие секций>===================================================================================
+
+._title-text{
+		font-weight: 900;
+		text-shadow: 2px 2px 0 #DEB17F,
+						 -2px -2px 0 #DEB17F,
+						 2px -2px 0 #DEB17F,
+						 -2px 2px 0 #DEB17F,
+						 0 2px 0 #DEB17F,
+						 0 -2px #DEB17F,
+						 2px 0 0 #DEB17F,
+						 -2px 0 0 #DEB17F;
+		color: #fff;
+		white-space: pre-line;
+		line-height: calc(60/50*100%);
+		& span{
+			color: #000;
+			text-shadow: none;
+		}
+}
+
+
+
